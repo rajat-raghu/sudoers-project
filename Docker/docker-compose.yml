@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  web:
+    build: ./nginx/.
+    ports:
+      - "93:80"
+  container:
+    build: ./1/.
+    command: echo "Conatiner 1"
+    ports:
+      - "91:91" 
+  cont:
+    build: ./2/.
+    ports:
+      - "92:92"
